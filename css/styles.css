@@ -1153,8 +1153,6 @@ p, dd, li { text-wrap: pretty; }
   font-weight: 400;
 }
 
-.teach-col__count::after { content: " sections"; }
-
 .teach-col ul {
   list-style: none;
   margin: 0;
@@ -1565,6 +1563,285 @@ p, dd, li { text-wrap: pretty; }
 }
 
 .site-footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* Current focus */
+.focus {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: clamp(1.6rem, 4vw, 3.5rem);
+  align-items: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+  padding: clamp(1.6rem, 4vw, 3rem);
+  background-color: var(--dark);
+  background-image:
+    linear-gradient(rgba(238, 243, 247, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(238, 243, 247, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+  color: var(--light);
+  cursor: pointer;
+  --focus: 0 0 0 2px var(--dark), 0 0 0 4px var(--teal-light);
+}
+
+.focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: clamp(1.6rem, 4vw, 3rem);
+  width: 4rem;
+  height: 3px;
+  background: var(--sand);
+  transition: width 0.6s var(--ease);
+}
+
+.focus:hover::before,
+.focus.is-selected::before { width: 8rem; }
+
+.focus ::selection { background: rgba(143, 208, 203, 0.32); color: #fff; }
+
+.focus__kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0 0 0.9rem;
+  color: var(--sand-light);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: var(--track);
+  text-transform: uppercase;
+}
+
+.focus__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--sand);
+  box-shadow: 0 0 0 4px rgba(184, 154, 103, 0.18);
+}
+
+.focus h3 {
+  margin: 0 0 1rem;
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--on-dark);
+}
+
+.focus__lead {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--on-dark-muted);
+}
+
+.focus__qs {
+  counter-reset: q;
+  list-style: none;
+  margin: 1.4rem 0 0;
+  padding: 0;
+  border-top: 1px solid var(--on-dark-line);
+}
+
+.focus__qs li {
+  counter-increment: q;
+  display: grid;
+  grid-template-columns: 2.4rem minmax(0, 1fr);
+  align-items: baseline;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--on-dark-line);
+  color: var(--on-dark);
+  font-family: var(--display);
+  font-size: clamp(1.05rem, 1.6vw, 1.18rem);
+  line-height: 1.4;
+}
+
+.focus__qs li::before {
+  content: "Q" counter(q);
+  color: var(--teal-light);
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}
+
+.focus__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.3rem 0 0;
+}
+
+.focus__meta span {
+  padding: 0.18rem 0.55rem;
+  border: 1px solid var(--on-dark-line);
+  color: var(--on-dark-muted);
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+}
+
+.focus__fig { margin: 0; }
+
+.loop {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--teal-light);
+  overflow: visible;
+}
+
+.loop__arc {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  opacity: 0.85;
+}
+
+.loop__arc--back { stroke-dasharray: 4 5; }
+
+.loop__node {
+  fill: rgba(143, 208, 203, 0.06);
+  stroke: currentColor;
+  stroke-width: 1.4;
+}
+
+.loop__glyph {
+  fill: none;
+  stroke: var(--on-dark);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.loop__iris { fill: var(--on-dark); }
+
+.loop__intent {
+  fill: var(--dark);
+  stroke: var(--sand);
+  stroke-width: 1.4;
+  stroke-dasharray: 3 3;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: intent 6s linear infinite;
+}
+
+@keyframes intent { to { transform: rotate(360deg); } }
+
+.loop__q {
+  fill: var(--sand-light);
+  font-family: var(--display);
+  font-size: 13px;
+  text-anchor: middle;
+}
+
+.loop__label {
+  fill: var(--on-dark-muted);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-anchor: middle;
+}
+
+.loop__label--accent { fill: var(--sand-light); }
+.loop__label--left { text-anchor: start; }
+
+.loop__trace {
+  fill: none;
+  stroke: var(--teal-light);
+  stroke-width: 1.3;
+  stroke-linejoin: round;
+  stroke-dasharray: 700;
+  stroke-dashoffset: 0;
+}
+
+.js .focus.reveal .loop__trace {
+  stroke-dashoffset: 700;
+  transition: stroke-dashoffset 2.6s var(--ease-out) 0.3s;
+}
+
+.js .focus.reveal.is-visible .loop__trace { stroke-dashoffset: 0; }
+
+.focus figcaption {
+  margin-top: 0.6rem;
+  color: var(--on-dark-muted);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Recognition */
+.ledger {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.2rem, 4vw, 3rem);
+}
+
+.ledger h3 {
+  margin: 0;
+  padding-bottom: 0.7rem;
+  border-bottom: 2px solid var(--ink);
+  font-family: var(--display);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.ledger ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ledger li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1rem;
+  align-items: baseline;
+  padding: 0.85rem 0.3rem;
+  border-bottom: 1px solid var(--line);
+  transition: background var(--t) var(--ease);
+}
+
+.ledger li:hover { background: var(--teal-soft); }
+
+.ledger li > span {
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.ledger small {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--muted);
+  font-size: 0.86rem;
+  font-weight: 400;
+}
+
+.ledger time {
+  color: var(--sand-ink);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .focus { grid-template-columns: 1fr; }
+  .focus__fig { max-width: 26rem; }
+  .ledger { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 720px) {
+  .focus { margin-left: calc(var(--gutter) * -1); margin-right: calc(var(--gutter) * -1); padding: 2rem var(--gutter); }
+  .focus::before { left: var(--gutter); }
+}
+
+@media print {
+  .focus { background: none !important; color: #000 !important; border: 0.5pt solid #999; break-inside: avoid; }
+  .focus *, .focus__qs li { color: #000 !important; }
+  .focus__fig { display: none; }
+}
 
 /* Motion */
 .js .reveal {

@@ -7,7 +7,7 @@
   const year = document.getElementById("year");
   const canvas = document.getElementById("field");
   const pills = [...document.querySelectorAll(".theme-pill")];
-  const themeRows = [...document.querySelectorAll(".theme[data-key]")];
+  const themeRows = [...document.querySelectorAll("[data-key]")];
   const topicNodes = [...document.querySelectorAll("[data-topics]")];
   const filterStatus = document.getElementById("filterStatus");
   const sections = [...document.querySelectorAll("main section[id]")];

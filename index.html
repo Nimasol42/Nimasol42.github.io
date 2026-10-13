@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nima Soltani · Computer Engineering Research</title>
-  <meta name="description" content="Nima Soltani is a computer engineering researcher at Shahid Beheshti University and IPM, working on deep reinforcement learning, multimodal and physics-informed models, MEG signal analysis, and blockchain systems." />
+  <meta name="description" content="Nima Soltani is a computer engineering researcher at Shahid Beheshti University and IPM, working on deep reinforcement learning, multimodal and physics-informed models, MEG studies of vision, action, and deception, and blockchain systems." />
   <meta name="author" content="Nima Soltani" />
   <meta name="theme-color" content="#0b1220" />
   <meta name="color-scheme" content="light" />
@@ -104,14 +104,16 @@
         <span>IPM</span>
         <span>SBU</span>
         <span>Sharif</span>
+        <span>AUT</span>
       </div>
 
       <div class="hero__body">
         <p class="hero__eyebrow reveal" data-reveal>Computer&nbsp;Engineering · Shahid&nbsp;Beheshti&nbsp;University · IPM</p>
         <h1 id="hero-name" class="hero__name reveal" data-reveal>Nima Soltani</h1>
         <p class="hero__statement reveal" data-reveal>
-          I study how sequential decision systems learn from heterogeneous signals — markets, physical laws, graphs, and neural recordings — and what it takes
-          for them to stay reliable under uncertainty.
+          I study how sequential decision systems learn from heterogeneous signals — markets,
+          physical laws, graphs, and neural recordings — and, in the brain, how what we see
+          is bound to what we do.
         </p>
 
         <div class="hero__cta reveal" data-reveal>
@@ -139,7 +141,7 @@
           </div>
           <div class="glance__item">
             <dt>Focus</dt>
-            <dd>Deep RL · Multimodal learning · Neural signals</dd>
+            <dd>Deep RL · Multimodal learning · Vision and action</dd>
           </div>
           <div class="glance__item">
             <dt>Degree</dt>
@@ -171,10 +173,11 @@
             evaluations careful enough to tell when they do not.
           </p>
           <p>
-            At Shahid Beheshti I also study Ethereum protocols and smart-contract security
-            with Dr. Maedeh Mosharraf, and build MEG analysis pipelines for visual and
-            cognitive decoding with Dr. Narjes Soltani. Teaching runs alongside all of it,
-            at Shahid Beheshti and at Sharif University of Technology.
+            At Shahid Beheshti I study Ethereum protocols and smart-contract security with
+            Dr. Maedeh Mosharraf, and work with Dr. Narjes Soltani on MEG: how visual perception
+            and action planning interact, and how deceptive intent shows up in action and in
+            neural signals. Teaching runs alongside all of it, at Shahid Beheshti, Sharif, and
+            Amirkabir University of Technology.
           </p>
         </div>
         <dl class="stat-rail reveal" data-reveal>
@@ -187,8 +190,8 @@
             <dd data-count="3">3</dd>
           </div>
           <div class="stat">
-            <dt>Teaching assistantships at Sharif and SBU</dt>
-            <dd data-count="28">28</dd>
+            <dt>Teaching assistantships across three universities</dt>
+            <dd data-count="34">34</dd>
           </div>
         </dl>
       </div>
@@ -198,7 +201,7 @@
       <div class="section__intro section__intro--split">
         <div>
           <p class="kicker"><span class="kicker__no">02</span>Research</p>
-          <h2 id="themes-title">Five questions I keep returning to</h2>
+          <h2 id="themes-title">A current focus, and five questions I keep returning to</h2>
         </div>
         <div class="filter">
           <p class="filter__hint" id="filterHint">Choose a theme to keep its papers and appointments in focus.</p>
@@ -213,6 +216,52 @@
           <p class="filter__status" id="filterStatus" aria-live="polite"></p>
         </div>
       </div>
+
+      <article class="focus reveal" data-reveal data-topics="brain" data-key="brain" aria-labelledby="focus-title">
+        <div class="focus__text">
+          <p class="focus__kicker"><span class="focus__dot" aria-hidden="true"></span>Current focus · Computational neuroscience</p>
+          <h3 id="focus-title">Vision, action, and deception</h3>
+          <p class="focus__lead">
+            Seeing and acting are usually studied apart, yet every reach is planned from what
+            the eyes report, and every movement changes what is seen next. Deception puts that
+            loop under strain: an action can be shaped to hide its own goal, and an observer has
+            to read intent from motion alone. With Dr. Narjes Soltani at Shahid Beheshti University,
+            I am working toward questions like these:
+          </p>
+          <ol class="focus__qs">
+            <li>How do visual perception and action planning shape each other while a movement is prepared and carried out?</li>
+            <li>When an action is meant to deceive, how is the hidden intent encoded in the actor, and how is it perceived by an observer?</li>
+            <li>Can that intent be decoded from MEG — from localized sources and their time–frequency dynamics — and how early?</li>
+          </ol>
+          <p class="focus__meta">
+            <span>MEG preprocessing</span><span>Source localization</span><span>Time–frequency analysis</span><span>Neural decoding</span>
+          </p>
+        </div>
+        <figure class="focus__fig" aria-hidden="true">
+          <svg viewBox="0 0 360 260" class="loop">
+            <defs>
+              <marker id="arrow" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 8 4 0 8z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <path class="loop__arc" d="M96 78 C 150 22, 210 22, 264 78" marker-end="url(#arrow)"/>
+            <path class="loop__arc loop__arc--back" d="M264 122 C 210 178, 150 178, 96 122" marker-end="url(#arrow)"/>
+            <circle class="loop__node" cx="70" cy="100" r="30"/>
+            <ellipse class="loop__glyph" cx="70" cy="100" rx="15" ry="8.5"/>
+            <circle class="loop__iris" cx="70" cy="100" r="4.5"/>
+            <circle class="loop__node" cx="290" cy="100" r="30"/>
+            <path class="loop__glyph" d="M278 111 296 93M286 92h10.5v10.5"/>
+            <circle class="loop__intent" cx="180" cy="100" r="11"/>
+            <text class="loop__q" x="180" y="104.5">?</text>
+            <text class="loop__label" x="70" y="150">perceive</text>
+            <text class="loop__label" x="290" y="150">act</text>
+            <text class="loop__label loop__label--accent" x="180" y="78">intent</text>
+            <path class="loop__trace" d="M20 222 h40 l6 -10 l6 18 l6 -26 l6 30 l6 -14 h14 l5 -6 l5 9 h18 l6 -20 l5 28 l6 -16 l5 6 h22 l4 -8 l5 14 l5 -22 l6 26 l5 -12 h16 l5 5 l5 -9 l5 4 h30 l6 -18 l6 24 l5 -10 h26"/>
+            <text class="loop__label loop__label--left" x="20" y="252">MEG · decode?</text>
+          </svg>
+          <figcaption>Schematic of the questions, not of results.</figcaption>
+        </figure>
+      </article>
 
       <div class="theme-list">
         <article class="theme reveal" data-reveal data-topics="markets" data-key="markets">
@@ -258,7 +307,8 @@
             <p>
               MEG pipelines from preprocessing to source localization and decoding, using
               spectral and time–frequency analysis to study activity linked to visual
-              perception and cognitive processing.
+              perception and cognitive processing — the groundwork for the vision–action
+              questions above.
             </p>
           </div>
           <span class="theme__tag">Brain signals</span>
@@ -367,8 +417,10 @@
             <p class="appointment__place">Research Assistant · with Dr. Narjes Soltani</p>
             <p>
               Computational pipelines for MEG preprocessing, source localization, and neural
-              decoding, using machine learning and spectral analysis to study brain activity
-              related to visual perception and cognition.
+              decoding, using machine learning and spectral and time–frequency analysis to study
+              brain activity related to visual perception and cognition. Current direction: the
+              interaction of vision and action, with a focus on how deceptive intent is encoded,
+              perceived, and possibly decoded.
             </p>
           </div>
         </article>
@@ -393,29 +445,45 @@
     <section class="section" id="teaching" aria-labelledby="teaching-title">
       <div class="section__intro">
         <p class="kicker"><span class="kicker__no">05</span>Teaching</p>
-        <h2 id="teaching-title">Twenty-eight course sections at two universities</h2>
+        <h2 id="teaching-title">Thirty-four course sections at three universities</h2>
         <p class="lede">
-          Teaching assistantships at Sharif University of Technology and Shahid Beheshti University
-          since 2024 — from first-year programming to a graduate course in blockchain technology,
-          including three head-TA appointments.
+          Teaching assistantships at Sharif University of Technology, Shahid Beheshti University,
+          and Amirkabir University of Technology since 2024 — from first-year programming to
+          graduate courses in blockchain technology, experimental design, and signals and control,
+          including six head-TA appointments.
         </p>
       </div>
 
       <div class="teach-board">
         <div class="teach-stack">
         <div class="teach-col reveal" data-reveal>
-          <h3><span>Sharif University of Technology</span><span class="teach-col__count">10</span></h3>
+          <h3><span>Sharif University of Technology</span><span class="teach-col__count">14 sections</span></h3>
           <ul>
             <li>
               <span class="course">Logic Circuits</span>
-              <span class="course__who">Dr. S. Hessabi · Dr. L. Arshadi</span>
-              <span class="course__when">2025 — 2026</span>
-              <span class="course__n" aria-label="3 sections">×3</span>
+              <span class="course__who">Dr. L. Arshadi · Dr. S. Hessabi</span>
+              <span class="course__when">2025–2027</span>
+              <span class="course__n" aria-label="4 sections">×4</span>
+            </li>
+            <li>
+              <span class="course">Data Mining</span>
+              <span class="course__who">Dr. M. Khalooei</span>
+              <span class="course__when">2026–2027</span>
+            </li>
+            <li>
+              <span class="course">Compiler</span>
+              <span class="course__who">S. Hosseinmardi</span>
+              <span class="course__when">2026–2027</span>
+            </li>
+            <li>
+              <span class="course">Machine Learning Systems Engineering</span>
+              <span class="course__who">Dr. M. Ramezani</span>
+              <span class="course__when">2026–2027</span>
             </li>
             <li>
               <span class="course">Computer Architecture</span>
               <span class="course__who">Dr. L. Arshadi</span>
-              <span class="course__when">2025 — 2026</span>
+              <span class="course__when">2025–2026</span>
               <span class="course__n" aria-label="2 sections">×2</span>
             </li>
             <li>
@@ -425,9 +493,20 @@
             </li>
             <li>
               <span class="course">Fundamentals of Programming</span>
-              <span class="course__who">M. Nazari · Dr. M. Sadri · M. Zarei</span>
-              <span class="course__when">2024 — 2026</span>
+              <span class="course__who">M. Nazari · M. Sadri · M. Zarei</span>
+              <span class="course__when">2024–2026</span>
               <span class="course__n" aria-label="4 sections">×4</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="teach-col reveal" data-reveal>
+          <h3><span>Amirkabir University of Technology</span><span class="teach-col__count">1 section</span></h3>
+          <ul>
+            <li>
+              <span class="course">Data Mining</span>
+              <span class="course__who">Dr. B. Yousefimehr</span>
+              <span class="course__when">2026–2027</span>
             </li>
           </ul>
         </div>
@@ -450,14 +529,24 @@
           </dl>
         </div>
         </div>
+
         <div class="teach-col reveal" data-reveal>
-          <h3><span>Shahid Beheshti University</span><span class="teach-col__count">18</span></h3>
+          <h3><span>Shahid Beheshti University</span><span class="teach-col__count">19 sections</span></h3>
           <ul>
             <li>
-              <span class="course">Blockchain Technology <em class="tag">Graduate</em></span>
-              <span class="course__who">Dr. M. Mosharraf</span>
-              <span class="course__when">2026 — 2027</span>
-              <span class="course__n" aria-label="2 sections">×2</span>
+              <span class="course">Principles of Design and Analysis of Experiments <em class="tag">Graduate</em> <em class="tag tag--head">Head TA</em></span>
+              <span class="course__who">Dr. N. Soltani</span>
+              <span class="course__when">2026–2027</span>
+            </li>
+            <li>
+              <span class="course">Signals and Systems and Digital Control <em class="tag">Graduate</em> <em class="tag tag--head">Head TA</em></span>
+              <span class="course__who">Dr. Z. Pourbafarani</span>
+              <span class="course__when">2026–2027</span>
+            </li>
+            <li>
+              <span class="course">Engineering Probability and Statistics <em class="tag tag--head">Head TA</em></span>
+              <span class="course__who">Dr. N. Soltani</span>
+              <span class="course__when">2026–2027</span>
             </li>
             <li>
               <span class="course">Linear Algebra <em class="tag tag--head">Head TA</em></span>
@@ -472,41 +561,46 @@
             <li>
               <span class="course">Fundamentals of Programming <em class="tag tag--head">Head TA</em></span>
               <span class="course__who">Dr. M. Mojahedi</span>
-              <span class="course__when">2025 — 2026</span>
+              <span class="course__when">2025–2026</span>
             </li>
             <li>
-              <span class="course">Fundamentals of Programming</span>
-              <span class="course__who">Dr. Z. Pourbafarani · Dr. M. Abdoos</span>
-              <span class="course__when">2025 — 2026</span>
+              <span class="course">Blockchain Technology <em class="tag">Graduate</em></span>
+              <span class="course__who">Dr. M. Mosharraf</span>
+              <span class="course__when">2026–2027</span>
               <span class="course__n" aria-label="2 sections">×2</span>
+            </li>
+            <li>
+              <span class="course">Database</span>
+              <span class="course__who">Dr. H. Haghighi</span>
+              <span class="course__when">2026–2027</span>
             </li>
             <li>
               <span class="course">Advanced Programming</span>
               <span class="course__who">Dr. M. Vahidi Asl · Dr. S. Aliakbari</span>
-              <span class="course__when">2025 — 2026</span>
+              <span class="course__when">2025–2026</span>
               <span class="course__n" aria-label="3 sections">×3</span>
+            </li>
+            <li>
+              <span class="course">Fundamentals of Programming</span>
+              <span class="course__who">Dr. Z. Pourbafarani · Dr. M. Abdoos</span>
+              <span class="course__when">2025–2026</span>
+              <span class="course__n" aria-label="2 sections">×2</span>
             </li>
             <li>
               <span class="course">Computer Architecture</span>
               <span class="course__who">Dr. D. Rahmati · Dr. R. Salarifard</span>
-              <span class="course__when">2025 — 2026</span>
+              <span class="course__when">2025–2026</span>
               <span class="course__n" aria-label="2 sections">×2</span>
             </li>
             <li>
               <span class="course">Data Structures and Algorithms</span>
               <span class="course__who">Dr. A.-A. Abin</span>
-              <span class="course__when">2025 — 2026</span>
+              <span class="course__when">2025–2026</span>
             </li>
             <li>
-              <span class="course">Database Systems · Engineering Probability and Statistics · Design and Analysis of Experiments</span>
-              <span class="course__who">Dr. H. Haghighi · Dr. N. Soltani</span>
-              <span class="course__when">2026 — 2027</span>
-              <span class="course__n" aria-label="3 sections">×3</span>
-            </li>
-            <li>
-              <span class="course">Formal Languages and Automata · Applied Computer Skills</span>
+              <span class="course">Formal Languages and Automata Theory · Applied Computer Skills</span>
               <span class="course__who">Dr. R. Ghavami Zadeh · Dr. H. Malek</span>
-              <span class="course__when">2024 — 2025</span>
+              <span class="course__when">2024–2025</span>
               <span class="course__n" aria-label="2 sections">×2</span>
             </li>
           </ul>
@@ -578,10 +672,40 @@
       </dl>
     </section>
 
+    <section class="section" id="recognition" aria-labelledby="recognition-title">
+      <div class="section__intro">
+        <p class="kicker"><span class="kicker__no">08</span>Recognition</p>
+        <h2 id="recognition-title">Distinctions, schools, and meetings</h2>
+      </div>
+      <div class="ledger reveal" data-reveal>
+        <div class="ledger__col">
+          <h3>Distinctions &amp; training</h3>
+          <ul>
+            <li><span>Top 0.2% in the National University Entrance Exam</span></li>
+            <li><span>NeuroCONNECT Summer School in Computational Neuroscience<small>CONNECT — Community for Neuroscience and Cognitive Techs</small></span><time datetime="2026-08">Aug 2026</time></li>
+            <li><span>Advanced Algorithmic Thinking and Data Structures Certificate<small>Quera</small></span></li>
+            <li><span>Academic Article Writing Workshop<small>Institute for Advanced Studies in Basic Sciences</small></span></li>
+            <li><span>Serious Game Design with a Cognitive Approach<small>Workshop, Shahid Beheshti University</small></span></li>
+            <li><span>ICDL Certification<small>Technical and Vocational Training Organization</small></span></li>
+          </ul>
+        </div>
+        <div class="ledger__col">
+          <h3>Conferences &amp; memberships</h3>
+          <ul>
+            <li><span>International Interdisciplinary Conference on Artificial Intelligence (IICAI)<small>Participant · Shahid Beheshti University / IEEE</small></span><time datetime="2026-05">May 2026</time></li>
+            <li><span>9th Conference on Advances in Enterprise Architecture of Iran<small>Participant · Shahid Beheshti University</small></span><time datetime="2025-11">Nov 2025</time></li>
+            <li><span>ISCISC 2025, specialized workshops<small>BIOS security, fault injection, code readout attacks, smart-card authentication, AI for cybersecurity</small></span><time datetime="2025-10">Oct 2025</time></li>
+            <li><span>Prompt Engineering for Large Language Models<small>Workshop, 1st International Conference on Artificial Intelligence (ICAI)</small></span><time datetime="2025-02">Feb 2025</time></li>
+            <li><span>Iranian Bioinformatics Society (IBIS)<small>Member</small></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="contact__frame reveal" data-reveal>
         <div class="contact__intro">
-          <p class="kicker kicker--light"><span class="kicker__no">08</span>Correspondence</p>
+          <p class="kicker kicker--light"><span class="kicker__no">09</span>Correspondence</p>
           <h2 id="contact-title">Write to me</h2>
           <p>
             Questions about any of the work above, and conversations about possible
