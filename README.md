@@ -16,4 +16,6 @@ npx --yes serve .
 
 ## Update content
 
-Edit `index.html` for profile text, publications, teaching, and contact details. Replace `assets/portrait.jpg` or `assets/CV-Nima-Soltani.pdf` as needed.
+Edit `index.html` for profile text, publications, teaching, and contact details, and replace `assets/CV-Nima-Soltani.pdf` when the CV changes. Styles live in `css/styles.css`; interactions (theme filter, copy buttons, background field) in `js/main.js`.
+
+Also in the root: `404.html`, `favicon.svg` / `favicon.ico` / `apple-touch-icon.png`, `robots.txt`, and `sitemap.xml` (update `lastmod` after substantial edits).
