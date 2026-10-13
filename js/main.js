@@ -32,13 +32,42 @@
       if (section.offsetTop <= marker) current = section.id;
     }
     if (window.innerHeight + top >= doc.scrollHeight - 4) current = "contact";
+    let activeLink = null;
     navLinks.forEach((link) => {
       const active = link.getAttribute("href") === `#${current}`;
       link.classList.toggle("is-active", active);
-      if (active) link.setAttribute("aria-current", "true");
-      else link.removeAttribute("aria-current");
+      if (active) {
+        link.setAttribute("aria-current", "true");
+        activeLink = link;
+      } else {
+        link.removeAttribute("aria-current");
+      }
     });
+    moveIndicator(activeLink);
   };
+
+  const indicator = document.querySelector(".nav-indicator");
+  let indicatorTarget;
+  function moveIndicator(link) {
+    if (!indicator || link === indicatorTarget) return;
+    indicatorTarget = link;
+    if (!link || !link.offsetWidth) {
+      indicator.classList.remove("is-ready");
+      return;
+    }
+    const y = link.offsetTop + link.offsetHeight - 1;
+    indicator.style.transform = `translate(${link.offsetLeft}px, ${y}px) scaleX(${link.offsetWidth})`;
+    requestAnimationFrame(() => indicator.classList.add("is-ready"));
+  }
+
+  window.addEventListener("resize", () => {
+    indicatorTarget = undefined;
+    onScroll();
+  });
+  document.fonts?.ready.then(() => {
+    indicatorTarget = undefined;
+    onScroll();
+  });
 
   window.addEventListener(
     "scroll",
@@ -71,6 +100,10 @@
   });
 
   /* Reveal on scroll */
+  document.querySelectorAll(".section__intro").forEach((intro) => {
+    intro.classList.add("reveal");
+    intro.setAttribute("data-reveal", "");
+  });
   const revealNodes = [...document.querySelectorAll("[data-reveal]")];
   if ("IntersectionObserver" in window && !reducedMotion.matches) {
     const io = new IntersectionObserver(
@@ -162,26 +195,41 @@
   /* Copy contact details */
   const copyStatus = document.getElementById("copyStatus");
   const copyButtons = [...document.querySelectorAll("[data-copy]")];
-  if (navigator.clipboard && window.isSecureContext) {
-    copyButtons.forEach((button) => {
-      button.addEventListener("click", async () => {
-        try {
-          await navigator.clipboard.writeText(button.dataset.copy || "");
-          button.textContent = "Copied";
-          button.classList.add("is-done");
-          if (copyStatus) copyStatus.textContent = `Copied ${button.dataset.copy}`;
-          setTimeout(() => {
-            button.textContent = "Copy";
-            button.classList.remove("is-done");
-          }, 1800);
-        } catch {
-          button.textContent = "Select";
-        }
-      });
+  const selectValue = (button) => {
+    const value = button.parentElement?.querySelector(".channel__value");
+    if (!value) return;
+    const range = document.createRange();
+    range.selectNodeContents(value);
+    const sel = window.getSelection();
+    sel?.removeAllRanges();
+    sel?.addRange(range);
+  };
+
+  const flash = (button, label, done) => {
+    clearTimeout(button._t);
+    button.textContent = label;
+    button.classList.toggle("is-done", done);
+    button._t = setTimeout(() => {
+      button.textContent = "Copy";
+      button.classList.remove("is-done");
+    }, 1800);
+  };
+
+  copyButtons.forEach((button) => {
+    button.addEventListener("click", async () => {
+      const text = button.dataset.copy || "";
+      try {
+        if (!navigator.clipboard || !window.isSecureContext) throw new Error("no clipboard");
+        await navigator.clipboard.writeText(text);
+        flash(button, "Copied", true);
+        if (copyStatus) copyStatus.textContent = `Copied ${text}`;
+      } catch {
+        selectValue(button);
+        flash(button, "Selected", false);
+        if (copyStatus) copyStatus.textContent = `${text} selected; press Ctrl+C to copy`;
+      }
     });
-  } else {
-    copyButtons.forEach((button) => button.remove());
-  }
+  });
 
   /* Local time in Tehran */
   const clock = document.getElementById("localTime");
