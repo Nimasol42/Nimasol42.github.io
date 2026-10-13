@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://nimasol42.github.io/sitemap.xml
