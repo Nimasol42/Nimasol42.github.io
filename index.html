@@ -3,399 +3,458 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nima Soltani — Computer Engineering · AI Research</title>
-  <meta name="description" content="Nima Soltani — Computer Engineering undergraduate at Shahid Beheshti University. Research in deep reinforcement learning, multimodal AI, and computational neuroscience at IPM and SBU." />
+  <title>Nima Soltani</title>
+  <meta name="description" content="Nima Soltani — computer engineering researcher working on reinforcement learning, multimodal systems, physics-informed networks, and neural signal analysis." />
   <meta name="author" content="Nima Soltani" />
-  <meta property="og:title" content="Nima Soltani — Academic Portfolio" />
-  <meta property="og:description" content="Research in deep reinforcement learning, multimodal AI, and computational neuroscience." />
+  <meta property="og:title" content="Nima Soltani" />
+  <meta property="og:description" content="Research across learning systems, structured time series, and computational neuroscience." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://nimasol42.github.io/" />
-  <meta property="og:image" content="https://nimasol42.github.io/assets/portrait.jpg" />
   <link rel="canonical" href="https://nimasol42.github.io/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%230E1621'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' font-family='Georgia,serif' font-size='30' fill='%23E8EDF2'%3ENS%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23091019'/%3E%3Ctext x='50%25' y='55%25' text-anchor='middle' font-family='Georgia,serif' font-size='26' fill='%23E7EEF5'%3ENS%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Spectral:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400;1,6..72,500&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <div class="progress" id="progress" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
+  <canvas class="field" id="field" aria-hidden="true"></canvas>
 
   <header class="site-header" id="top">
-    <a class="mark" href="#top" aria-label="Nima Soltani — home">
-      <span class="mark__initials">NS</span>
-      <span class="mark__name">Nima Soltani</span>
-    </a>
+    <a class="mark" href="#top">Nima Soltani</a>
+
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" type="button">
-      <span class="nav-toggle__label">Menu</span>
-      <span class="nav-toggle__bars" aria-hidden="true"></span>
+      Menu
     </button>
+
     <nav class="site-nav" id="siteNav" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#experience">Experience</a>
+      <a href="#overview">Overview</a>
+      <a href="#themes">Themes</a>
+      <a href="#writing">Writing</a>
+      <a href="#appointments">Appointments</a>
       <a href="#teaching">Teaching</a>
       <a href="#contact">Contact</a>
-      <a class="btn btn--compact" href="assets/CV-Nima-Soltani.pdf" download>CV</a>
+      <div class="nav-social" aria-label="Profiles">
+        <a href="https://scholar.google.com/citations?user=js3rIYIAAAAJ&amp;hl=en" target="_blank" rel="noopener" title="Google Scholar">Scholar</a>
+        <a href="https://www.researchgate.net/profile/Nima-Soltani-5" target="_blank" rel="noopener" title="ResearchGate">RG</a>
+        <a href="https://www.linkedin.com/in/nima-soltani-334496323/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+        <a href="https://github.com/Nimasol42" target="_blank" rel="noopener" title="GitHub">GitHub</a>
+      </div>
+      <a class="cv-link" href="assets/CV-Nima-Soltani.pdf" download>CV</a>
     </nav>
   </header>
 
   <main>
     <section class="hero" aria-labelledby="hero-name">
-      <div class="hero__copy">
-        <p class="hero__kicker reveal" data-reveal>Computer Engineering · AI Research</p>
-        <h1 id="hero-name" class="hero__name reveal" data-reveal>
-          <span>Nima</span>
-          <span>Soltani</span>
-        </h1>
-        <p class="hero__lede reveal" data-reveal>
-          Undergraduate researcher at Shahid Beheshti University and IPM, working across
-          deep reinforcement learning, multimodal systems, and computational neuroscience.
+      <div class="hero__rail" aria-hidden="true">
+        <span>IPM</span>
+        <span>SBU</span>
+        <span>Sharif</span>
+      </div>
+
+      <div class="hero__body">
+        <p class="hero__eyebrow reveal" data-reveal>Computer Engineering · Learning Systems</p>
+        <h1 id="hero-name" class="hero__name reveal" data-reveal>Nima Soltani</h1>
+        <p class="hero__statement reveal" data-reveal>
+          I study how sequential decision systems learn from heterogeneous signals —
+          markets, physical constraints, graphs, and neural recordings — and how those
+          systems can remain reliable under uncertainty.
         </p>
-        <div class="hero__actions reveal" data-reveal>
-          <a class="btn btn--primary" href="assets/CV-Nima-Soltani.pdf" download>Download CV</a>
-          <a class="btn btn--ghost" href="#publications">View publications</a>
-        </div>
-        <ul class="hero__meta reveal" data-reveal>
-          <li>B.Sc. Computer Engineering, SBU</li>
-          <li>GPA 3.6 / 4.0</li>
-          <li>Seeking graduate research opportunities</li>
-        </ul>
-      </div>
-      <div class="hero__visual reveal" data-reveal>
-        <figure class="portrait">
-          <img src="assets/portrait.jpg" alt="Portrait of Nima Soltani" width="720" height="900" fetchpriority="high" />
-          <figcaption>
-            <span>Research Assistant</span>
-            <span>IPM · Shahid Beheshti University</span>
-          </figcaption>
-        </figure>
-        <div class="hero__orbit" aria-hidden="true">
-          <span>DRL</span>
-          <span>Multimodal AI</span>
-          <span>Neurocomputing</span>
-        </div>
-      </div>
-    </section>
 
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="section__head">
-        <p class="eyebrow">Profile</p>
-        <h2 id="about-title">About</h2>
-      </div>
-      <div class="about__grid">
-        <div class="about__prose reveal" data-reveal>
-          <p>
-            I am a Computer Engineering undergraduate at
-            <strong>Shahid Beheshti University</strong>, conducting research at the
-            <strong>Institute for Research in Fundamental Sciences (IPM)</strong> and SBU.
-            My work spans deep reinforcement learning for financial decision-making,
-            physics-informed neural networks, graph-based time-series modeling,
-            blockchain systems, and MEG-based neural signal processing.
-          </p>
-          <p>
-            I also serve as a Teaching Assistant at SBU and
-            <strong>Sharif University of Technology</strong>, mentoring students across
-            programming, architecture, algorithms, and blockchain.
-          </p>
+        <div class="hero__cta reveal" data-reveal>
+          <a class="btn btn--solid" href="#writing">Selected writing</a>
+          <a class="btn btn--line" href="#contact">Write to me</a>
         </div>
-        <aside class="about__panel reveal" data-reveal>
-          <h3>Focus areas</h3>
-          <ul class="chip-list" id="interestList" role="list">
-            <li><button type="button" class="chip is-active" data-topic="all">All</button></li>
-            <li><button type="button" class="chip" data-topic="gnn">Graph &amp; Hypergraph NNs</button></li>
-            <li><button type="button" class="chip" data-topic="multimodal">Multimodal Transformers</button></li>
-            <li><button type="button" class="chip" data-topic="finance">Financial Time-Series</button></li>
-            <li><button type="button" class="chip" data-topic="neuro">Neurocomputing</button></li>
-            <li><button type="button" class="chip" data-topic="vision">Computer Vision</button></li>
-            <li><button type="button" class="chip" data-topic="systems">Networks &amp; Distributed Systems</button></li>
-          </ul>
-          <div class="about__links">
-            <a href="https://scholar.google.com/citations?user=js3rIYIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-            <a href="https://www.researchgate.net/profile/Nima-Soltani-5" target="_blank" rel="noopener">ResearchGate</a>
-            <a href="https://www.linkedin.com/in/nima-soltani-334496323/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://github.com/Nimasol42" target="_blank" rel="noopener">GitHub</a>
+      </div>
+
+      <aside class="hero__panel reveal" data-reveal aria-label="At a glance">
+        <div class="glance">
+          <div class="glance__item">
+            <span>Institution</span>
+            <strong>Shahid Beheshti University</strong>
           </div>
-        </aside>
+          <div class="glance__item">
+            <span>Research</span>
+            <strong>IPM · SBU labs</strong>
+          </div>
+          <div class="glance__item">
+            <span>Focus</span>
+            <strong>DRL · Multimodal AI · Neurocomputing</strong>
+          </div>
+          <div class="glance__item">
+            <span>Degree</span>
+            <strong>B.Sc. Computer Engineering · GPA 3.6/4</strong>
+          </div>
+        </div>
+        <div class="theme-switch" role="tablist" aria-label="Explore themes">
+          <button type="button" class="theme-pill is-active" data-topic="all" role="tab" aria-selected="true">All work</button>
+          <button type="button" class="theme-pill" data-topic="markets" role="tab">Markets</button>
+          <button type="button" class="theme-pill" data-topic="structure" role="tab">Structure</button>
+          <button type="button" class="theme-pill" data-topic="physics" role="tab">Physics</button>
+          <button type="button" class="theme-pill" data-topic="brain" role="tab">Brain signals</button>
+          <button type="button" class="theme-pill" data-topic="chain" role="tab">Protocols</button>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="overview">
+      <div class="section__intro">
+        <p class="kicker">Overview</p>
+        <h2>A research practice between models, markets, and measurement</h2>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-copy reveal" data-reveal>
+          <p>
+            I am an undergraduate in Computer Engineering at Shahid Beheshti University
+            and a research assistant at the Institute for Research in Fundamental Sciences (IPM).
+            Across these appointments I build learning systems that fuse modalities,
+            respect physical or institutional structure, and can be evaluated with care.
+          </p>
+          <p>
+            Parallel threads include blockchain protocol and smart-contract work at SBU,
+            MEG analysis for visual and cognitive decoding, and extensive teaching at
+            Shahid Beheshti and Sharif University of Technology — from first-year programming
+            to graduate blockchain.
+          </p>
+        </div>
+        <div class="stat-rail reveal" data-reveal>
+          <div class="stat">
+            <strong data-count="3">0</strong>
+            <span>manuscripts in review / preprint</span>
+          </div>
+          <div class="stat">
+            <strong data-count="3">0</strong>
+            <span>active research appointments</span>
+          </div>
+          <div class="stat">
+            <strong data-count="30">0</strong>
+            <span>teaching appointments across SBU &amp; Sharif</span>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="section research" id="research" aria-labelledby="research-title">
-      <div class="section__head">
-        <p class="eyebrow">Inquiry</p>
-        <h2 id="research-title">Research</h2>
-        <p class="section__lede">Current lines of work across learning systems, markets, neural signals, and decentralized infrastructure.</p>
+    <section class="section" id="themes">
+      <div class="section__intro">
+        <p class="kicker">Research themes</p>
+        <h2>Questions I return to</h2>
+        <p class="lede">Select a theme above to dim unrelated work across the page.</p>
       </div>
-      <div class="research-grid">
-        <article class="research-item reveal" data-reveal data-topics="finance multimodal">
-          <span class="research-item__index">01</span>
-          <h3>Multimodal Trading Agents</h3>
-          <p>Deep RL agents that fuse technical, fundamental, and textual market signals through transformer and xLSTM architectures with conservative on-policy diffusion policies.</p>
+
+      <div class="theme-list">
+        <article class="theme reveal" data-reveal data-topics="markets">
+          <span class="theme__no">01</span>
+          <div>
+            <h3>Multimodal decision agents for markets</h3>
+            <p>
+              Reinforcement-learning traders that read price dynamics together with
+              fundamentals and text, using transformer and xLSTM backbones and
+              conservative on-policy diffusion for more stable portfolio behavior.
+            </p>
+          </div>
         </article>
-        <article class="research-item reveal" data-reveal data-topics="gnn finance">
-          <span class="research-item__index">02</span>
-          <h3>Graph Time-Series Modeling</h3>
-          <p>Graph and hypergraph neural networks for structured market dynamics, relational forecasting, and interpretable temporal dependencies.</p>
+        <article class="theme reveal" data-reveal data-topics="structure markets">
+          <span class="theme__no">02</span>
+          <div>
+            <h3>Graphs as a language for time</h3>
+            <p>
+              Graph and hypergraph models that treat co-movement, influence, and
+              regime structure as first-class objects rather than afterthought features
+              in financial and sequential forecasting.
+            </p>
+          </div>
         </article>
-        <article class="research-item reveal" data-reveal data-topics="multimodal">
-          <span class="research-item__index">03</span>
-          <h3>Physics-Informed Networks</h3>
-          <p>PG-KINN: Petrov–Galerkin Kolmogorov–Arnold networks for forward and inverse PDE solving with stronger inductive bias and numerical structure.</p>
+        <article class="theme reveal" data-reveal data-topics="physics">
+          <span class="theme__no">03</span>
+          <div>
+            <h3>Networks that know the equations</h3>
+            <p>
+              Physics-informed Kolmogorov–Arnold architectures — including PG-KINN —
+              for forward and inverse PDE problems, where numerical structure and
+              learning capacity are designed to meet.
+            </p>
+          </div>
         </article>
-        <article class="research-item reveal" data-reveal data-topics="neuro">
-          <span class="research-item__index">04</span>
-          <h3>MEG Neural Decoding</h3>
-          <p>Computational pipelines for magnetoencephalography preprocessing, source localization, and decoding of visual and cognitive neural patterns.</p>
+        <article class="theme reveal" data-reveal data-topics="brain">
+          <span class="theme__no">04</span>
+          <div>
+            <h3>Reading cortical dynamics</h3>
+            <p>
+              End-to-end MEG pipelines for preprocessing, source localization, and
+              decoding, with spectral and time–frequency analysis aimed at visual
+              perception and cognitive state.
+            </p>
+          </div>
         </article>
-        <article class="research-item reveal" data-reveal data-topics="systems">
-          <span class="research-item__index">05</span>
-          <h3>Blockchain Systems</h3>
-          <p>Ethereum protocol design, smart-contract development, consensus behavior, and security analysis of cryptocurrency and DeFi infrastructures.</p>
+        <article class="theme reveal" data-reveal data-topics="chain">
+          <span class="theme__no">05</span>
+          <div>
+            <h3>Protocols under adversarial reality</h3>
+            <p>
+              Ethereum-facing systems work: consensus behavior, Solidity contracts,
+              on-chain transaction structure, and security questions around DeFi
+              and cryptocurrency infrastructure.
+            </p>
+          </div>
         </article>
       </div>
     </section>
 
-    <section class="section publications" id="publications" aria-labelledby="pubs-title">
-      <div class="section__head">
-        <p class="eyebrow">Scholarship</p>
-        <h2 id="pubs-title">Publications</h2>
+    <section class="section" id="writing">
+      <div class="section__intro">
+        <p class="kicker">Writing</p>
+        <h2>Publications &amp; preprints</h2>
       </div>
-      <ol class="pub-list">
-        <li class="pub reveal" data-reveal data-topics="finance multimodal">
-          <div class="pub__status">Under Review · Applied Soft Computing</div>
-          <h3 class="pub__title">Automated Stock Trading Using Deep Reinforcement Learning and Fused xLSTM Networks</h3>
-          <p class="pub__authors"><strong>N. Soltani</strong>, A. Sadr, A. Pakniyat, K. Pakzad, and D. Rahmati</p>
-          <p class="pub__venue">Elsevier · Preprinted at SSRN</p>
+
+      <ol class="writing-list">
+        <li class="writing reveal" data-reveal data-topics="markets">
+          <div class="writing__meta">
+            <span class="badge">Under review</span>
+            <span>Applied Soft Computing · Elsevier</span>
+          </div>
+          <h3>Automated Stock Trading Using Deep Reinforcement Learning and Fused xLSTM Networks</h3>
+          <p class="writing__by"><b>N. Soltani</b>, A. Sadr, A. Pakniyat, K. Pakzad, D. Rahmati</p>
+          <p class="writing__note">Preprinted at SSRN. A fused-memory RL agent for sequential trading under nonstationary market conditions.</p>
         </li>
-        <li class="pub reveal" data-reveal data-topics="finance multimodal">
-          <div class="pub__status">Under Review · Expert Systems with Applications</div>
-          <h3 class="pub__title">Robust Multimodal Portfolio Trading Using Transformer-Based PPO: Technical-Fundamental Fusion with Conservative On-Policy Diffusion</h3>
-          <p class="pub__authors">D. Rahmati, <strong>N. Soltani</strong>, and A. Sadr</p>
-          <p class="pub__venue">Elsevier</p>
+        <li class="writing reveal" data-reveal data-topics="markets">
+          <div class="writing__meta">
+            <span class="badge">Under review</span>
+            <span>Expert Systems with Applications · Elsevier</span>
+          </div>
+          <h3>Robust Multimodal Portfolio Trading Using Transformer-Based PPO</h3>
+          <p class="writing__by">D. Rahmati, <b>N. Soltani</b>, A. Sadr</p>
+          <p class="writing__note">Technical–fundamental fusion with conservative on-policy diffusion for multimodal portfolio control.</p>
         </li>
-        <li class="pub reveal" data-reveal data-topics="multimodal">
-          <div class="pub__status">Preprint · arXiv</div>
-          <h3 class="pub__title">PG-KINN: A Physics-Informed Petrov-Galerkin Kolmogorov-Arnold Network for Solving Forward and Inverse PDEs</h3>
-          <p class="pub__authors">A. Sadr, <strong>N. Soltani</strong>, V. Moghtadaiee, A. Pakniyat, D. Rahmati, and S. Gorgin</p>
-          <p class="pub__venue">arXiv preprint</p>
+        <li class="writing reveal" data-reveal data-topics="physics">
+          <div class="writing__meta">
+            <span class="badge badge--soft">Preprint</span>
+            <span>arXiv</span>
+          </div>
+          <h3>PG-KINN: A Physics-Informed Petrov–Galerkin Kolmogorov–Arnold Network for Forward and Inverse PDEs</h3>
+          <p class="writing__by">A. Sadr, <b>N. Soltani</b>, V. Moghtadaiee, A. Pakniyat, D. Rahmati, S. Gorgin</p>
+          <p class="writing__note">A Petrov–Galerkin framing of KANs for PDE solving with stronger inductive bias.</p>
         </li>
       </ol>
     </section>
 
-    <section class="section experience" id="experience" aria-labelledby="exp-title">
-      <div class="section__head">
-        <p class="eyebrow">Appointments</p>
-        <h2 id="exp-title">Research Experience</h2>
+    <section class="section" id="appointments">
+      <div class="section__intro">
+        <p class="kicker">Appointments</p>
+        <h2>Where the work happens</h2>
       </div>
-      <div class="timeline">
-        <article class="timeline__item reveal" data-reveal data-topics="finance multimodal gnn">
-          <div class="timeline__when">2023 — Present</div>
-          <div class="timeline__body">
-            <h3>Research Assistant — IPM</h3>
-            <p class="timeline__org">Institute for Research in Fundamental Sciences · Dr. Dara Rahmati</p>
-            <p>Developing deep RL and multimodal AI systems for financial modeling and automated trading, including MTDP-PPO, fused xLSTM–PPO agents, PG-KINN, and graph/hypergraph models of market dynamics.</p>
-          </div>
-        </article>
-        <article class="timeline__item reveal" data-reveal data-topics="systems">
-          <div class="timeline__when">2024 — Present</div>
-          <div class="timeline__body">
-            <h3>Research Assistant — Shahid Beheshti University</h3>
-            <p class="timeline__org">Blockchain &amp; Distributed Systems · Dr. Maedeh Mosharraf</p>
-            <p>Investigating Ethereum protocol design, Solidity smart contracts, consensus mechanisms, on-chain transaction modeling, and DeFi security analysis.</p>
-          </div>
-        </article>
-        <article class="timeline__item reveal" data-reveal data-topics="neuro">
-          <div class="timeline__when">2026 — Present</div>
-          <div class="timeline__body">
-            <h3>Research Assistant — Shahid Beheshti University</h3>
-            <p class="timeline__org">Computational Neuroscience · Dr. Narjes Soltani</p>
-            <p>Building MEG preprocessing, source localization, and neural decoding pipelines with machine learning and spectral/time-frequency analysis for visual perception and cognition.</p>
-          </div>
-        </article>
-      </div>
-    </section>
 
-    <section class="section education" id="education" aria-labelledby="edu-title">
-      <div class="section__head">
-        <p class="eyebrow">Formation</p>
-        <h2 id="edu-title">Education</h2>
+      <div class="appointments">
+        <article class="appointment reveal" data-reveal data-topics="markets structure physics">
+          <time>2023 — Present</time>
+          <div>
+            <h3>Research Assistant · IPM</h3>
+            <p class="appointment__place">Institute for Research in Fundamental Sciences · with Dr. Dara Rahmati</p>
+            <p>
+              Leading and co-developing deep RL and multimodal systems for market modeling —
+              MTDP-PPO, fused xLSTM–PPO agents, PG-KINN, and graph-based accounts of
+              temporal market structure.
+            </p>
+          </div>
+        </article>
+        <article class="appointment reveal" data-reveal data-topics="chain">
+          <time>2024 — Present</time>
+          <div>
+            <h3>Research Assistant · Shahid Beheshti University</h3>
+            <p class="appointment__place">Blockchain &amp; distributed systems · with Dr. Maedeh Mosharraf</p>
+            <p>
+              Studying Ethereum design choices, smart-contract engineering, consensus,
+              and the security surface of cryptocurrency and DeFi systems.
+            </p>
+          </div>
+        </article>
+        <article class="appointment reveal" data-reveal data-topics="brain">
+          <time>2026 — Present</time>
+          <div>
+            <h3>Research Assistant · Shahid Beheshti University</h3>
+            <p class="appointment__place">Computational neuroscience · with Dr. Narjes Soltani</p>
+            <p>
+              Building MEG analysis pipelines that move from raw recordings to localized
+              sources and decoded perceptual or cognitive variables.
+            </p>
+          </div>
+        </article>
       </div>
-      <div class="edu-grid">
-        <article class="edu-card reveal" data-reveal>
-          <div class="edu-card__years">2023 — Present</div>
+
+      <div class="education reveal" data-reveal>
+        <div>
+          <p class="kicker">Education</p>
           <h3>B.Sc. Computer Engineering</h3>
-          <p>Shahid Beheshti University, Tehran</p>
-          <p class="edu-card__meta">GPA 3.6 / 4.0</p>
-        </article>
-        <article class="edu-card reveal" data-reveal>
-          <div class="edu-card__years">2020 — 2023</div>
-          <h3>Diploma · Mathematics &amp; Physics</h3>
-          <p>National Organization for Development of Exceptional Talents (Sampad), Zanjan</p>
-          <p class="edu-card__meta">GPA 18.88 / 20 · Top 0.2% National University Entrance Exam</p>
-        </article>
+          <p>Shahid Beheshti University · 2023 — Present · GPA 3.6 / 4.0</p>
+        </div>
+        <div>
+          <p class="kicker">Earlier</p>
+          <h3>Mathematics &amp; Physics Diploma · Sampad</h3>
+          <p>Zanjan · 2020 — 2023 · National Entrance Exam, top 0.2%</p>
+        </div>
       </div>
     </section>
 
-    <section class="section teaching" id="teaching" aria-labelledby="teach-title">
-      <div class="section__head">
-        <p class="eyebrow">Instruction</p>
-        <h2 id="teach-title">Teaching</h2>
-        <p class="section__lede">Academic Teaching Assistant at Sharif University of Technology and Shahid Beheshti University.</p>
+    <section class="section" id="teaching">
+      <div class="section__intro">
+        <p class="kicker">Teaching</p>
+        <h2>Classroom &amp; workshop work</h2>
+        <p class="lede">
+          Teaching assistant at Sharif University of Technology and Shahid Beheshti University,
+          including several head-TA roles and graduate blockchain instruction.
+        </p>
       </div>
 
-      <div class="teach-columns">
-        <div class="teach-block reveal" data-reveal>
+      <div class="teach-board">
+        <div class="teach-col reveal" data-reveal>
           <h3>Sharif University of Technology</h3>
-          <ul class="teach-list">
-            <li><span>Logic Circuits</span><span>Dr. Shahin Hessabi · Feb–Jul 2026</span></li>
-            <li><span>Logic Circuits</span><span>Dr. Laleh Arshadi · Feb–Jul 2026</span></li>
-            <li><span>Scientific &amp; Technical Presentation</span><span>Dr. Laleh Arshadi · Feb–Jul 2026</span></li>
-            <li><span>Computer Architecture</span><span>Dr. Laleh Arshadi · Sep 2025–Feb 2026</span></li>
-            <li><span>Logic Circuits</span><span>Dr. Laleh Arshadi · Sep 2025–Feb 2026</span></li>
-            <li><span>Fundamentals of Programming</span><span>Mr. Mohammad Nazari · Sep 2025–Feb 2026</span></li>
-            <li><span>Computer Architecture</span><span>Dr. Laleh Arshadi · Jan–Jun 2025</span></li>
-            <li><span>Fundamentals of Programming</span><span>Multiple instructors · 2024–2025</span></li>
+          <ul>
+            <li>
+              <span>Logic Circuits</span>
+              <em>Hessabi · Arshadi · 2025–2026</em>
+            </li>
+            <li>
+              <span>Computer Architecture</span>
+              <em>Arshadi · 2025–2026</em>
+            </li>
+            <li>
+              <span>Scientific &amp; Technical Presentation</span>
+              <em>Arshadi · 2026</em>
+            </li>
+            <li>
+              <span>Fundamentals of Programming</span>
+              <em>Multiple instructors · 2024–2026</em>
+            </li>
           </ul>
         </div>
-        <div class="teach-block reveal" data-reveal>
+        <div class="teach-col reveal" data-reveal>
           <h3>Shahid Beheshti University</h3>
-          <ul class="teach-list">
-            <li><span>Blockchain Technology <em>(Graduate)</em></span><span>Dr. Maedeh Mosharraf · 2026</span></li>
-            <li><span>Linear Algebra <em>(Head TA)</em></span><span>Dr. Farokhlagha Moazami · 2026</span></li>
-            <li><span>Fundamentals of Data Mining <em>(Head TA)</em></span><span>Dr. Ahmad-Ali Abin · 2026</span></li>
-            <li><span>Fundamentals of Programming <em>(Head TA)</em></span><span>Dr. Mahdi Mojahedi · 2025–2026</span></li>
-            <li><span>Data Structures &amp; Algorithms</span><span>Dr. Ahmad-Ali Abin · 2025–2026</span></li>
-            <li><span>Computer Architecture</span><span>Dr. Dara Rahmati · 2025–2026</span></li>
-            <li><span>Database</span><span>Dr. Hassan Haghighi · 2026–2027</span></li>
-            <li><span>Engineering Probability &amp; Statistics</span><span>Dr. Narjes Soltani · 2026–2027</span></li>
-            <li><span>Advanced Programming</span><span>Multiple instructors · 2025–2026</span></li>
-            <li><span>Formal Languages &amp; Automata</span><span>Dr. Ramak Ghavami Zadeh · 2025</span></li>
+          <ul>
+            <li>
+              <span>Blockchain Technology <i>(Graduate)</i></span>
+              <em>Mosharraf · 2026</em>
+            </li>
+            <li>
+              <span>Linear Algebra <i>(Head TA)</i></span>
+              <em>Moazami · 2026</em>
+            </li>
+            <li>
+              <span>Data Mining <i>(Head TA)</i></span>
+              <em>Abin · 2026</em>
+            </li>
+            <li>
+              <span>Programming <i>(Head TA)</i></span>
+              <em>Mojahedi · 2025–2026</em>
+            </li>
+            <li>
+              <span>Data Structures &amp; Algorithms</span>
+              <em>Abin · 2025–2026</em>
+            </li>
+            <li>
+              <span>Computer Architecture · Database · Probability · Automata · AP</span>
+              <em>2024–2027</em>
+            </li>
           </ul>
         </div>
       </div>
 
-      <div class="volunteering reveal" data-reveal>
-        <h3>Selected workshops &amp; mentoring</h3>
-        <ul>
-          <li>Pointers, dynamic memory, recursion, OOP, STL, Unity game development, graph algorithms, dynamic programming, Ethereum smart contracts, and blockchain security workshops.</li>
-          <li>Substitute lectures on Instruction Set Architecture and MIPS assembly.</li>
-          <li>Volunteer mentor for first-year programming and algorithmic problem-solving.</li>
-          <li>Secretariat Member, 1st International Conference on Artificial Intelligence, Tehran (Feb 2025).</li>
-        </ul>
+      <div class="workshop reveal" data-reveal>
+        <h3>Beyond the weekly section</h3>
+        <p>
+          Workshops on memory and recursion, Java OOP, STL, Unity, graph algorithms,
+          dynamic programming, Ethereum contracts, and blockchain security; substitute
+          lectures on ISA and MIPS; mentoring for first-year students; secretariat for
+          the 1st International Conference on Artificial Intelligence (Tehran, 2025).
+        </p>
       </div>
     </section>
 
-    <section class="section projects" id="projects" aria-labelledby="proj-title">
-      <div class="section__head">
-        <p class="eyebrow">Selected work</p>
-        <h2 id="proj-title">Course Projects</h2>
+    <section class="section" id="studio">
+      <div class="section__intro">
+        <p class="kicker">Selected projects</p>
+        <h2>Course studio</h2>
       </div>
-      <div class="project-grid">
-        <article class="project reveal" data-reveal>
-          <h3>Intelligent Game-Playing Agent</h3>
-          <p>Adversarial search with Minimax and Alpha–Beta pruning, heuristic evaluation, and experimental performance–optimality analysis.</p>
+      <div class="studio-grid">
+        <article class="studio reveal" data-reveal>
+          <h3>Adversarial game agent</h3>
+          <p>Minimax and Alpha–Beta search with heuristic evaluation and controlled depth experiments.</p>
         </article>
-        <article class="project reveal" data-reveal>
-          <h3>Recommender System via SVD</h3>
-          <p>Iterative SVD and PCA latent-factor modeling with RMSE/MAE evaluation and embedding visualization.</p>
+        <article class="studio reveal" data-reveal>
+          <h3>Latent-factor recommender</h3>
+          <p>Iterative SVD and PCA embeddings scored with RMSE/MAE and inspected visually.</p>
         </article>
-        <article class="project reveal" data-reveal>
-          <h3>Virtual Memory Simulator</h3>
-          <p>Page-replacement policy evaluation (LRU, Second Chance) with multi-run statistical analysis of fault rates.</p>
+        <article class="studio reveal" data-reveal>
+          <h3>Virtual memory laboratory</h3>
+          <p>LRU and Second Chance under varying page size and memory, with multi-run statistics.</p>
         </article>
-        <article class="project reveal" data-reveal>
-          <h3>SBUMIPS Processor</h3>
-          <p>MIPS-like processor design in Verilog with pipeline execution validated in ModelSim.</p>
+        <article class="studio reveal" data-reveal>
+          <h3>SBUMIPS</h3>
+          <p>A pipelined MIPS-like processor in Verilog, checked in ModelSim.</p>
         </article>
       </div>
     </section>
 
-    <section class="section skills" id="skills" aria-labelledby="skills-title">
-      <div class="section__head">
-        <p class="eyebrow">Toolkit</p>
-        <h2 id="skills-title">Technical Skills</h2>
+    <section class="section" id="toolkit">
+      <div class="section__intro">
+        <p class="kicker">Toolkit</p>
+        <h2>Methods I use day to day</h2>
       </div>
-      <dl class="skill-grid">
-        <div class="skill reveal" data-reveal>
-          <dt>Languages</dt>
-          <dd>Python, C, C++, C#, Java, MATLAB, R</dd>
+      <div class="toolkit reveal" data-reveal>
+        <div>
+          <h3>Learning</h3>
+          <p>PyTorch, Transformers, PPO, diffusion policies, xLSTM, GNNs, KANs, PINNs</p>
         </div>
-        <div class="skill reveal" data-reveal>
-          <dt>Deep Learning</dt>
-          <dd>PyTorch, Hugging Face, Scikit-learn, OpenCV</dd>
+        <div>
+          <h3>Signals &amp; science</h3>
+          <p>MEG/EEG pipelines, spectral analysis, NumPy/SciPy, W&amp;B, TensorBoard, LaTeX</p>
         </div>
-        <div class="skill reveal" data-reveal>
-          <dt>ML &amp; AI</dt>
-          <dd>PPO, Diffusion Policies, Transformers, xLSTM, GNNs, KANs, PINNs</dd>
+        <div>
+          <h3>Systems</h3>
+          <p>Python, C/C++, Java, MATLAB, Ethereum/Solidity, Verilog, Linux, Git</p>
         </div>
-        <div class="skill reveal" data-reveal>
-          <dt>Neuroscience</dt>
-          <dd>MEG/EEG analysis, spectral &amp; time-frequency methods</dd>
-        </div>
-        <div class="skill reveal" data-reveal>
-          <dt>Blockchain</dt>
-          <dd>Ethereum, Solidity, protocol design, DeFi security</dd>
-        </div>
-        <div class="skill reveal" data-reveal>
-          <dt>Scientific stack</dt>
-          <dd>NumPy, Pandas, SciPy, W&amp;B, TensorBoard, LaTeX, Linux</dd>
-        </div>
-      </dl>
+      </div>
     </section>
 
-    <section class="section awards" id="awards" aria-labelledby="awards-title">
-      <div class="section__head">
-        <p class="eyebrow">Recognition</p>
-        <h2 id="awards-title">Honors &amp; Activities</h2>
-      </div>
-      <ul class="award-list">
-        <li class="reveal" data-reveal>Ranked within the Top 0.2% in the National University Entrance Exam</li>
-        <li class="reveal" data-reveal>Advanced Algorithmic Thinking and Data Structures Certificate, Quera</li>
-        <li class="reveal" data-reveal>Member, Iranian Bioinformatics Society (IBIS)</li>
-        <li class="reveal" data-reveal>Participant, International Interdisciplinary Conference on Artificial Intelligence (IICAI), SBU / IEEE, 2026</li>
-        <li class="reveal" data-reveal>Specialized workshops, ISCISC 2025 — hardware security, fault injection, AI for cybersecurity</li>
-        <li class="reveal" data-reveal>Languages: Persian (Native), Turkish (Native), English (Professional Working Proficiency)</li>
-      </ul>
-    </section>
+    <section class="section contact" id="contact">
+      <div class="contact__frame reveal" data-reveal>
+        <div class="contact__intro">
+          <p class="kicker kicker--light">Contact</p>
+          <h2>Let’s continue the conversation</h2>
+          <p>
+            For research correspondence, collaboration, or questions about the work above,
+            email is the best place to start.
+          </p>
+        </div>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact__panel reveal" data-reveal>
-        <p class="eyebrow">Correspondence</p>
-        <h2 id="contact-title">Get in touch</h2>
-        <p class="contact__lede">Open to graduate research discussions in AI, machine learning, and related systems.</p>
-        <div class="contact__grid">
-          <a class="contact__item" href="mailto:nimasoltani.ce@gmail.com">
-            <span>Email</span>
-            <strong>nimasoltani.ce@gmail.com</strong>
+        <div class="contact__channels">
+          <a class="channel" href="mailto:nimasoltani.ce@gmail.com">
+            <span class="channel__label">Personal</span>
+            <span class="channel__value">nimasoltani.ce@gmail.com</span>
+            <span class="channel__go" aria-hidden="true">→</span>
           </a>
-          <a class="contact__item" href="mailto:ni.soltani@mail.sbu.ac.ir">
-            <span>Academic email</span>
-            <strong>ni.soltani@mail.sbu.ac.ir</strong>
+          <a class="channel" href="mailto:ni.soltani@mail.sbu.ac.ir">
+            <span class="channel__label">University</span>
+            <span class="channel__value">ni.soltani@mail.sbu.ac.ir</span>
+            <span class="channel__go" aria-hidden="true">→</span>
           </a>
-          <a class="contact__item" href="tel:+989023145710">
-            <span>Phone</span>
-            <strong>+98 902 314 5710</strong>
-          </a>
-          <a class="contact__item" href="https://scholar.google.com/citations?user=js3rIYIAAAAJ&amp;hl=en" target="_blank" rel="noopener">
-            <span>Scholar</span>
-            <strong>Google Scholar profile</strong>
+          <a class="channel" href="tel:+989023145710">
+            <span class="channel__label">Phone</span>
+            <span class="channel__value">+98 902 314 5710</span>
+            <span class="channel__go" aria-hidden="true">→</span>
           </a>
         </div>
-        <div class="contact__social">
-          <a href="https://www.linkedin.com/in/nima-soltani-334496323/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://www.researchgate.net/profile/Nima-Soltani-5" target="_blank" rel="noopener">ResearchGate</a>
-          <a href="https://github.com/Nimasol42" target="_blank" rel="noopener">GitHub</a>
-          <a href="assets/CV-Nima-Soltani.pdf" download>Download CV</a>
+
+        <div class="contact__aside">
+          <a class="contact-cv" href="assets/CV-Nima-Soltani.pdf" download>Download curriculum vitae</a>
+          <p class="contact__note">Profiles live in the header: Scholar, ResearchGate, LinkedIn, and GitHub.</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Nima Soltani · Designed for academic inquiry</p>
-    <a href="#top">Back to top</a>
+    <span>© <span id="year"></span> Nima Soltani</span>
+    <a href="#top">Top</a>
   </footer>
 
   <script src="js/main.js" defer></script>
